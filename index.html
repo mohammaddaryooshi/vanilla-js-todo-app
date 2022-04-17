@@ -4,10 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    referrerpolicy="no-referrer"
+  />
+    <link href="./style.css" rel="stylesheet">
     <title>TodoApp</title>
 </head>
 <body>
+   <div class="container">
+       <div class="todo-box">
+          <div class="top-bar">
+            
+              <div>
+                <i class="fa-solid fa-calendar-check app-icon"></i>
+                <span class="statics-title">Todo App</span>
+              </div>
+              <div>
+                  <span class="new-todo-title">New Todo</span>
+                 <span id="modal-btn">
+                  <i  class="fa-solid fa-circle-plus new-todo-icon"></i>
+                 </span>
+              </div>
+           
+          </div>
+          <div class="search-container">
+            <input id="search-input" type="text" name="todo" class="search-input" placeholder="search " />
+            <select name="search" id="serach-select">
+                <option value="all">all</option>
+                <option value="monthly">monthly</option>
+                <option value="weekly">weekly</option>
+                <option value="daily">daily</option>
+                
+            </select>
+          </div>
+          <div class="todolist-top">
+            <span class="todo-list-title">TodoList</span>
+           </div>
+          <div class="todos-container">
+              <ul id="todos-ul" class="todos-ul">
+                 
+              </ul>  
+          </div>
+
+          
+          <div class="new-todo-modal">
+              <div class="modal-header">
+                <span class="modal-header-title">Create New Todo</span>
+                <span class="close-btn">
+                  <i class="fa-solid fa-xmark close-icon"></i>
+                </span>
+              </div>
+              <div class="modal-body">
+                  <form class="new-todo-form">
+                    <div class="form-control">
+                      <input id="newtodo" class="todo" type="text" name="todo">
+                      <select id="newtodoselect" class="todo-type" name="todo-type" id="newtodo-select">
+                        <option value="daily">daily</option>
+                        <option value="weekly">weekly</option>
+                        <option value="monthly">monthly</option>
+                    </select>
+                    </div>
+                    <div  class="form-control">
+                      <button class="from-btn">CreateNew</button>
+                    </div>
+                  </form>
+              </div>
+          </div>
+           <div class="dark"></div>
+
+           <div class="edit-todo-modal" data-id="">
+            <div class="modal-header">
+              <span class="modal-header-title">EditTodo</span>
+              <span class="close-edtimodal-btn">
+                <i class="fa-solid fa-xmark close-icon"></i>
+              </span>
+            </div>
+            <div class="modal-body">
+                <form class="new-todo-form">
+                  <div class="form-control">
+                    <input id="edittodo" class="todo" type="text" name="todo">
+                    <select id="edittodoselect" class="todo-type" name="todo-type" id="newtodo-select">
+                      <option value="daily">daily</option>
+                      <option value="weekly">weekly</option>
+                      <option value="monthly">monthly</option>
+                  </select>
+                  </div>
+                  <div  class="form-control">
+                    <button id="submitEditBtn" class="from-btn">EditTodo</button>
+                  </div>
+                </form>
+            </div>
+        </div>
+
+
+
+       </div>
+   </div>
    
 <script src="./index.js"></script>
 </body>
